@@ -224,3 +224,39 @@ Swagger UI: http://localhost:8000/docs
 | `clicks`          | Счётчик переходов                      |
 | `user_id`         | Внешний ключ на владельца (user)       |
 
+---
+
+
+## Запуск тестов
+
+### Короткий отчет по тестам
+
+```bash
+python -m pytest tests
+```
+
+### Если интересует процент покрытия кода
+
+```bash
+python -m coverage run -m pytest tests
+python -m coverage report
+python -m coverage html
+```
+
+### Запуск тестов с нагрузкой
+
+```bash
+python -m locust -f locustfile.py
+```
+Тестирование происходит в веб интерфейсе по адресу
+
+```bash
+http://localhost:8089
+```
+
+
+В параметрах будет необходимо указать хост
+
+```bash
+http://localhost:8000
+```
