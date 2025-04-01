@@ -260,3 +260,7 @@ http://localhost:8089
 ```bash
 http://localhost:8000
 ```
+---
+
+### Отчёт покрытия тестов
+[Открыть HTML-отчёт](https://nekitur.github.io/apidz1/)
