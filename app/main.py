@@ -237,7 +237,7 @@ def expired_links(db: Session = Depends(get_db)):
     expired = db.query(Link).filter(Link.expires_at != None, Link.expires_at < now).all()
     return expired
 
-@app.delete("/links/cleanup")
+@app.delete("/cleanup-links")
 def cleanup_links(db: Session = Depends(get_db),
                   current_user: User = Depends(get_current_user)):
     now = datetime.datetime.utcnow()
@@ -254,3 +254,6 @@ def cleanup_links(db: Session = Depends(get_db),
         db.delete(link)
     db.commit()
     return {"message": f"Удалено {count} неиспользуемых или истекших ссылок"}
+
+
+

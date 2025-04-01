@@ -7,3 +7,7 @@ passlib[bcrypt]
 python-dotenv
 redis
 python-multipart
+pytest
+pytest-cov
+httpx
+locust
